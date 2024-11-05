@@ -1,3 +1,4 @@
+/* General styles */
 body {
   text-align: center;
   font-family: Arial, sans-serif;
@@ -19,21 +20,15 @@ body {
   height: 100%;
   top: 0;
   left: 0;
-  background-color: beige;
+  background: url('') center / cover repeat;
   opacity: 0.5;
   z-index: -1;
-}
-
-p{
-  font-family:Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 18px;
 }
 
 h1 {
   margin-top: 40px;
   color: #ff6f61;
-  font-size: 48px;
-  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 3rem;
 }
 
 #photo-gallery {
@@ -50,8 +45,8 @@ h1 {
   width: 80%;
   max-width: 800px;
   margin: 10px 0;
-  opacity: 1; /* Set to 1 to ensure visibility */
-  transform: translateY(0); /* No translation needed initially */
+  opacity: 1;
+  transform: translateY(0);
   transition: transform 0.5s ease-out, opacity 0.5s ease-out;
 }
 
@@ -71,14 +66,14 @@ h1 {
 }
 
 .photos img:hover {
-  transform: scale(1.2); /* Zoom in on hover */
+  transform: scale(1.2);
 }
 
 .photo-text-section p {
   width: 45%;
   padding: 20px;
-  font-size: 1.2rem;
-  background-color: rgba(255, 255, 255, 0.7);
+  font-size: 1.5rem;
+  background-color: rgb(235, 230, 230);
   border-radius: 10px;
   margin: 0 20px;
 }
@@ -101,7 +96,36 @@ h1 {
 #present-message p {
   font-size: 24px;
   color: #4a4a4a;
-  margin: 20px;
-  padding: 40px;
-  background-color: white;
+  margin-top: 20px;
+}
+
+
+/* Media Query for Smaller Screens */
+@media (max-width: 768px) {
+  #photo-gallery {
+    gap: 10px;
+  }
+
+  .photo-text-section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .photo-text-section p {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  #present-button {
+    font-size: 20px;
+    padding: 15px;
+  }
+
+  #present-message p {
+    font-size: 20px;
+  }
 }
